@@ -1,11 +1,20 @@
 DOCKER_NAME=hashicraft/minecraft
-DOCKER_VERSION=v1.21.1-fabric
+DOCKER_VERSION=v1.21.6-fabric
 
 build:
 	docker build -t ${DOCKER_NAME}:${DOCKER_VERSION} --no-cache .
 
 build_and_push: build
 	docker push ${DOCKER_NAME}:${DOCKER_VERSION}
+
+compress:
+	@echo "Compressing mods folder..."
+	@if [ -d "mods" ] && [ "$(shell ls -A mods 2>/dev/null)" ]; then \
+		tar -czf mods.tar.gz -C mods .; \
+		echo "Created mods.tar.gz"; \
+	else \
+		echo "mods folder is empty or doesn't exist"; \
+	fi
 
 ngrok:
 	ngrok tcp 25565
