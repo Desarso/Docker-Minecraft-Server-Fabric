@@ -35,6 +35,7 @@ ENV DIFFICULTY hard
 ENV SPAWN_MONSTERS true
 ENV SPAWN_ANIMALS true
 ENV SPAWN_NPCS true
+ENV MODS_BACKUP https://raw.githubusercontent.com/Desarso/Docker-Minecraft-Server-Fabric/main/mods.tar.gz
 
 ENV LEVEL_TYPE default
 ENV PVP true

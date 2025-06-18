@@ -16,6 +16,16 @@ compress:
 		echo "mods folder is empty or doesn't exist"; \
 	fi
 
+deploy-mods: compress
+	@echo "Mods compressed to mods.tar.gz"
+	@echo "To deploy:"
+	@echo "1. git add mods.tar.gz"
+	@echo "2. git commit -m 'Update mods'"
+	@echo "3. git push"
+	@echo ""
+	@echo "The mods will be available at:"
+	@echo "https://raw.githubusercontent.com/Desarso/Docker-Minecraft-Server-Fabric/main/mods.tar.gz"
+
 ngrok:
 	ngrok tcp 25565
 
