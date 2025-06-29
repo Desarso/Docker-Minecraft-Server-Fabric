@@ -1,4 +1,4 @@
-
+stronghold/find = -688,-1151
 ocean = 151, 610
 nether_portal = 15, 27
 
