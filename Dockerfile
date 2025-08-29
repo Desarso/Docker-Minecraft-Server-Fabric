@@ -62,6 +62,9 @@ ENV MAX_BUILD_HEIGHT 256
 ENV LEVEL_SEED -2429048941048277130
 ENV PREVENT_PROXY_CONNECTION false
 
+# Disable autopause to keep RCON available when server is empty
+ENV CARPET_AUTOPAUSE false
+
 EXPOSE 25565 27015
 
 ENTRYPOINT [ "/minecraft/entrypoint.sh" ]
