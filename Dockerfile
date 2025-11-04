@@ -27,6 +27,7 @@ COPY ./server.properties /server.properties
 # Set defaults for environment variables
 ENV MINECRAFT_PORT=25565
 ENV RCON_PORT=27015
+ENV RCON_PASSWORD=password
 ENV JAVA_MEMORY=2G
 ENV RCON_ENABLED=true
 ENV WHITELIST_ENABLED=true
