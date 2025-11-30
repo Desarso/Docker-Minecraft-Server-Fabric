@@ -73,4 +73,9 @@ container "minecraft" {
     key   = "RCON_ENABLED"
     value = "true"
   }
+
+  env {
+    key   = "CARPET_AUTOPAUSE"
+    value = "false"
+  }
 }
